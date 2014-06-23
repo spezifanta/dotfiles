@@ -1,0 +1,15 @@
+function cd {
+    builtin cd "$@" && ls --group-directories-first
+}
+
+function mkd {
+    mkdir -p "$1" && cd "$1"
+}
+
+function psgrep {
+    ps aux | grep -v grep | egrep "$1|PID"
+}
+
+function whatsmyip {
+    curl icanhazip.com
+}

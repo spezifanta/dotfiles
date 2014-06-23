@@ -1,0 +1,22 @@
+[user]
+    name = Alex Kuhrt
+    email = alex@kuhrt.ot
+
+[color]
+    ui = true
+
+[core]
+    editor = vim
+    excludesfile = ~/.gitignore   
+
+[alias]
+    br = branch
+    co = checkout
+    ci = commit
+    df = diff
+    lg = log -p
+    st = status
+    who = shortlog -s --
+    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s%d [%an]\"" --graph --date=short
+[push]
+	default = simple

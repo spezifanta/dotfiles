@@ -1,0 +1,3 @@
+#/usr/bin/env bash
+
+shutdown -h now && uptime -s >> $HOME/.uptime.log

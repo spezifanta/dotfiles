@@ -1,0 +1,8 @@
+BROWSER=firefox
+EDITOR=vim
+VISUAL=vim
+PAGER=most
+TERM=xterm
+
+export BROWSER EDITOR VISUAL PAGER TERM
+

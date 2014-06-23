@@ -1,0 +1,51 @@
+Xft.dpi:        96
+Xft.antialias:  1
+Xft.rgba:       rgb
+Xft.hinting:    1
+Xft.hintstyle:  hintfull
+
+URxvt.saveLines: 10000
+URxvt.background: #000000
+URxvt.foreground: #E7E7E7
+URxvt.font: xft:inconsolata:pixelsize=15
+URxvt.boldFont: xft:inconsolata:medium:pixelsize=15:style=Bold
+URxvt.scrollBar: false
+URxvt.geometry: 160x50
+URxvt.perl-lib: ~/.dotfiles/_urxvt/
+URxvt.perl-ext-common: default,clipboard,url-select
+URxvt.url-select.launcher: firefox -new-tab
+URxvt.url-select.underline: true
+URxvt.colorUL: #0375c6
+URxvt.matcher.button: 1
+
+! Black
+URxvt.color0: #000000
+URxvt.color8: #555753
+
+! Red
+URxvt.color1: #D45959
+URxvt.color9: #C60303
+
+! Green
+URxvt.color2: #95D459
+URxvt.color10: #63C603
+
+! Yellow
+URxvt.color3: #D4C359
+URxvt.color11: #C6AB03
+
+! Blue
+URxvt.color4: #59A1D4
+URxvt.color12: #0375C6
+
+! Magenta
+URxvt.color5: #9E59D4
+URxvt.color13: #7103C6
+
+! Cyan
+URxvt.color6: #59C0D4
+URxvt.color14: #03A7C6
+
+! Gray
+URxvt.color7: #D3D7CF
+URxvt.color15: #EEEEEC
