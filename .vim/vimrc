@@ -21,6 +21,12 @@ syntax on
 " Highlight searches
 set hlsearch
 
+" Ignore case in searches
+set ignorecase
+
+" While typing a search command higlight matching string
+set incsearch
+
 " Default encoding
 set encoding=utf-8
 
@@ -53,3 +59,15 @@ set showmode
 
 " Show matching brackets
 set showmatch
+
+" Show cursor position
+set ruler
+
+" Highlight the screen line of the cursor
+set cursorline
+
+" Minimal number of screen lines to keep above and below the cursor
+set scrolloff=5
+
+" Update file if it has been chanced outside of Vim
+set autoread
