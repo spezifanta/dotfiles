@@ -13,3 +13,4 @@ Requires:
 Credits:
  - dirkd https://github.com/dirkd/dotfiles
  - zezshyrule https://github.com/zezhyrule/dotfiles 
+ - mathiasbynens https://github.com/mathiasbynens/dotfiles 

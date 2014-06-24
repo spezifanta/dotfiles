@@ -3,7 +3,7 @@ function cd {
 }
 
 function mkd {
-    mkdir -p "$1" && cd "$1"
+    mkdir -p "$@" && cd "$@"
 }
 
 function psgrep {
@@ -12,4 +12,9 @@ function psgrep {
 
 function whatsmyip {
     curl icanhazip.com
+}
+
+# Usage: echo '{"foobar": 42}' | json
+function json {
+   python -m json.tool
 }

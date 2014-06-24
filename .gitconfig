@@ -10,12 +10,14 @@
     excludesfile = ~/.gitignore   
 
 [alias]
+    amend = commit --amend --reuse-message=HEAD
     br = branch
     co = checkout
     ci = commit
     df = diff
     lg = log -p
-    st = status
+    st = status -s .
+    tags = tag -l
     who = shortlog -s --
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s%d [%an]\"" --graph --date=short
 [push]
