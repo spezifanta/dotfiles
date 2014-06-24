@@ -2,7 +2,7 @@ BROWSER=firefox
 EDITOR=vim
 VISUAL=vim
 PAGER=most
-TERM=xterm
+TERM=xterm-256color
 
 export BROWSER EDITOR VISUAL PAGER TERM
 
