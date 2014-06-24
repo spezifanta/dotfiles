@@ -7,8 +7,8 @@ Xft.hintstyle:  hintfull
 URxvt.saveLines: 10000
 URxvt.background: #000000
 URxvt.foreground: #E7E7E7
-URxvt.font: xft:inconsolata:pixelsize=15
-URxvt.boldFont: xft:inconsolata:medium:pixelsize=15:style=Bold
+URxvt.font: xft:dina:pixelsize=13
+URxvt.boldFont: xft:dina:pixelsize=13
 URxvt.scrollBar: false
 URxvt.geometry: 160x50
 URxvt.perl-lib: ~/.dotfiles/_urxvt/
@@ -17,6 +17,8 @@ URxvt.url-select.launcher: firefox -new-tab
 URxvt.url-select.underline: true
 URxvt.colorUL: #0375c6
 URxvt.matcher.button: 1
+URxvt.cursorBlink: 1
+!URxvt.letterSpace: -1
 
 ! Black
 URxvt.color0: #000000
