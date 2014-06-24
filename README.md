@@ -8,6 +8,8 @@ Because having your dotfiles remote makes life easier.
 Requires:
  - urxvt
  - urxvt-perl extions
+ - dina-font
 
 Credits:
- - dirkd https://github.com/dirkd/dotfiles/
+ - dirkd https://github.com/dirkd/dotfiles
+ - zezshyrule https://github.com/zezhyrule/dotfiles 
