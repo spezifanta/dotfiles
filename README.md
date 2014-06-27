@@ -9,6 +9,7 @@ Requires:
  - urxvt
  - urxvt-perl extions
  - dina-font
+ - most
 
 Credits:
  - dirkd https://github.com/dirkd/dotfiles

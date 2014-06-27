@@ -1,3 +1,4 @@
 #/usr/bin/env bash
 
-shutdown -h now && uptime -s >> $HOME/.uptime.log
+echo Today you worked $(uptime -p)
+shutdown -h now && $(uptime -s) $(uptime -p) >> $HOME/.uptime.log
