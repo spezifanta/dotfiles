@@ -1,6 +1,6 @@
 [user]
-    name = Alex Kuhrt
-    email = alex@kuhrt.ot
+    name = Alexander Kuhrt
+    email = alexander.kuhrt@reservix.de
 
 [color]
     ui = true
@@ -8,6 +8,7 @@
 [core]
     editor = vim
     excludesfile = ~/.gitignore   
+	pager = less -F -X
 
 [alias]
     amend = commit --amend --reuse-message=HEAD
@@ -17,8 +18,9 @@
     df = diff
     lg = log -p
     st = status -s .
+    remotes = remote -v
     tags = tag -l
     who = shortlog -s --
-    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s%d [%an]\"" --graph --date=short
+    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s%d [%an]\"" --date=short
 [push]
 	default = simple
