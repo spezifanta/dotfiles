@@ -147,8 +147,10 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
     position top
-        status_command i3status
+    #status_command i3status --config .i3/status.conf
+    status_command $HOME/.i3/conky.sh
 }
 
 # fanta
-focus_follows_mouse no
+focus_follows_mouse yes
+bindsym Pause exec i3lock --color 000000

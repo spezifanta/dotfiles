@@ -1,4 +1,5 @@
 #/usr/bin/env bash
 
 echo Today you worked $(uptime -p)
-shutdown -h now && $(uptime -s) $(uptime -p) >> $HOME/.uptime.log
+echo $(uptime -s) $(uptime -p) >> $HOME/.uptime.log
+shutdown -h now
