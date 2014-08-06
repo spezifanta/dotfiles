@@ -1,4 +1,4 @@
-#/usr/bin/env bash
+#!/bin/bash
 
 echo Today you worked $(uptime -p)
 echo $(uptime -s) $(uptime -p) >> $HOME/.uptime.log
