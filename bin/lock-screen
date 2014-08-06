@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #
-# Takes the current feh background wallpaper and adds some blur by saving to a
-# file with "_blur" appended to it's name.
+# Takes the current feh background wallpaper and adds some blur by saving it
+# to a file with "_blur" appended to it's name.
 #
 # background.jpg -> background_blur.png
 #
@@ -13,11 +13,9 @@ dir=$(dirname $image)
 image_file_name=$(basename $image)
 blur_image_file_name="${dir}/${image_file_name%.*}_blur.png"
 
-
 if [ ! -f $blur_image_file_name ]
 then
   convert $image -blur 0x8 $blur_image_file_name
 fi
 
 i3lock -d -e -t -i $blur_image_file_name
-
