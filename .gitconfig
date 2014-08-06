@@ -21,6 +21,6 @@
     remotes = remote -v
     tags = tag -l
     who = shortlog -s --
-    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s%d [%an]\"" --date=short
+    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
 [push]
 	default = simple
