@@ -7,8 +7,8 @@
 
 [core]
     editor = vim
-    excludesfile = ~/.gitignore   
-	pager = less -F -X
+    excludesfile = ~/.gitignore
+    pager = less -F -X
 
 [alias]
     amend = commit --amend --reuse-message=HEAD
@@ -23,4 +23,4 @@
     who = shortlog -s --
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
 [push]
-	default = simple
+    default = simple
