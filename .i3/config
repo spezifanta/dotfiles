@@ -153,4 +153,6 @@ bar {
 
 # fanta
 focus_follows_mouse yes
+hide_edge_borders yes
 bindsym Pause exec i3lock --color 000000
+
