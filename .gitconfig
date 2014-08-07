@@ -7,20 +7,21 @@
 
 [core]
     editor = vim
-    excludesfile = ~/.gitignore   
+    excludesfile = ~/.gitignore
 	pager = less -F -X
 
 [alias]
     amend = commit --amend --reuse-message=HEAD
     br = branch
-    co = checkout
     ci = commit
+    co = checkout
     df = diff
+    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
     lg = log -p
-    st = status -s .
+    recover = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\";}; f"
     remotes = remote -v
+    st = status -s .
     tags = tag -l
     who = shortlog -s --
-    hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
 [push]
 	default = simple
