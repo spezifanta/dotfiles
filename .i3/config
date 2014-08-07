@@ -158,7 +158,13 @@ bar {
 
 # fanta
 focus_follows_mouse yes
+<<<<<<< HEAD
+hide_edge_borders yes
+bindsym Pause exec i3lock --color 000000
+
+=======
 mouse_warping none
 bindsym Pause exec i3lock --color 000000
 
 #for_window [class="^Pidgin$" window_role="^conversation$"] resize grow width 0 px or 30 ppt
+>>>>>>> 3fff4a76b9f0b45889624c772fd9ed66556123ae
