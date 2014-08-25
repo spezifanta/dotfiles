@@ -20,7 +20,7 @@
     lg = log -p
     recover = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\";}; f"
     remotes = remote -v
-    st = status -s .
+    st = status -sb .
     tags = tag -l
     who = shortlog -s --
 [push]
