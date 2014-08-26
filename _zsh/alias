@@ -4,4 +4,4 @@ alias du='du -h -c'
 alias grep='grep -i --color=auto'
 alias ls='ls --color=auto'
 alias ll='ls -hl'
-
+alias githome='cd "$(git rev-parse --show-toplevel)"'
