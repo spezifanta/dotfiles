@@ -5,10 +5,10 @@ Xft.hinting:    1
 Xft.hintstyle:  hintfull
 
 URxvt.saveLines: 10000
-URxvt.background: #000000
+URxvt.background: [50]#000000
 URxvt.foreground: #E7E7E7
-URxvt.font: xft:dina:pixelsize=13
-URxvt.boldFont: xft:dina:pixelsize=13
+URxvt.font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13
+URxvt.boldFont: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13
 URxvt.scrollBar: false
 URxvt.geometry: 160x50
 URxvt.perl-lib: ~/.dotfiles/_urxvt/
@@ -18,7 +18,8 @@ URxvt.url-select.underline: true
 URxvt.colorUL: #0375c6
 URxvt.matcher.button: 1
 URxvt.cursorBlink: 1
-!URxvt.letterSpace: -1
+URxvt.cursorColor: #63C603
+URxvt.letterSpace: -1
 
 ! Black
 URxvt.color0: #000000
