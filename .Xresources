@@ -6,7 +6,7 @@ Xft.hintstyle:  hintfull
 
 URxvt.saveLines: 10000
 URxvt.background: [50]#000000
-URxvt.foreground: #E7E7E7
+URxvt.foreground: #C8C8C8
 URxvt.font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13
 URxvt.boldFont: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13
 URxvt.scrollBar: false
@@ -22,33 +22,34 @@ URxvt.cursorColor: #63C603
 URxvt.letterSpace: -1
 
 ! Black
-URxvt.color0: #000000
-URxvt.color8: #555753
+URxvt.color0: #646464
+URxvt.color8: #000000
 
 ! Red
-URxvt.color1: #D45959
-URxvt.color9: #C60303
+URxvt.color1: #C86464
+URxvt.color9: #C80000
 
 ! Green
-URxvt.color2: #95D459
-URxvt.color10: #63C603
+URxvt.color2: #96C864
+URxvt.color10: #64C800
 
 ! Yellow
-URxvt.color3: #D4C359
-URxvt.color11: #C6AB03
+URxvt.color3: #FFE480
+URxvt.color11: #FFC800
 
 ! Blue
-URxvt.color4: #59A1D4
-URxvt.color12: #0375C6
+URxvt.color4: #6496C8
+URxvt.color12: #0064C8
 
 ! Magenta
-URxvt.color5: #9E59D4
-URxvt.color13: #7103C6
+URxvt.color5: #C864C8
+URxvt.color13: #C800C8
 
 ! Cyan
-URxvt.color6: #59C0D4
-URxvt.color14: #03A7C6
+URxvt.color6: #64AFC8
+URxvt.color14: #0096C8
 
 ! Gray
-URxvt.color7: #D3D7CF
-URxvt.color15: #EEEEEC
+URxvt.color7: #FFFFFF
+URxvt.color15: #C8C8C8
+
