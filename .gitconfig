@@ -1,7 +1,3 @@
-[user]
-    name = Alexander Kuhrt
-    email = alexander.kuhrt@reservix.de
-
 [color]
     ui = true
 
@@ -18,10 +14,19 @@
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
     lg = log -p
+    pushf = push --force-with-lease
     recover = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\";}; f"
     remotes = remote -v
     st = status -sb .
     tags = tag -l
     who = shortlog -s --
+
 [push]
-    default = simple
+    default = current
+    followTags = true
+
+[fetch]
+    prune = true
+
+[include]
+    path = ~/.gitconfig.local
