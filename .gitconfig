@@ -10,6 +10,7 @@
     amend = commit --amend --reuse-message=HEAD
     br = branch
     ci = commit
+    cleanup = "!f() { git branch --merged | grep -v -P '\\*\\|master\\|dev' | xargs -n1 -r git branch -d; }; f"
     co = checkout
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
