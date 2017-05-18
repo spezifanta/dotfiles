@@ -20,6 +20,7 @@
     remotes = remote -v
     st = status -sb .
     tags = tag -l
+    up = !git fetch && git rebase --autostash FETCH_HEAD
     who = shortlog -s --
 
 [push]
