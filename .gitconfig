@@ -7,7 +7,7 @@
     pager = less -F -X
 
 [alias]
-    amend = commit --amend --reuse-message=HEAD
+    amend = commit --amend --reuse-message=HEAD --no-verify
     sclone = clone --depth=1
     br = branch
     ci = commit
@@ -15,13 +15,15 @@
     co = checkout
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
+    last = log -1 HEAD
     lg = log -p
     pushf = push --force-with-lease
     recover = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\";}; f"
     remotes = remote -v
     st = status -sb .
     tags = tag -l
-    up = !git fetch && git rebase --autostash FETCH_HEAD
+    unstage = reset HEAD --
+    up = !pull --rebase --autostash -X HEAD
     who = shortlog -s --
 
 [push]
