@@ -24,6 +24,7 @@
     tags = tag -l
     unstage = reset HEAD --
     up = !pull --rebase --autostash -X HEAD
+    update = pull --rebase --autostash -X theirs origin develop
     who = shortlog -s --
 
 [push]
