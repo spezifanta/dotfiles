@@ -1,24 +1,37 @@
 #!/usr/bin/env bash
 
-cd "$(dirname "${BASH_SOURCE[0]}")" 
+readonly DOTFILE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+readonly BACKUP_DIR="${HOME}/.dotfiles_backup"
+readonly IGNORE_FILES="install.sh .git README.md preview.png $(find * -maxdepth 0 -regex '^_.*' -printf '%f ')"
 
-BACKUP_DIR="${HOME}/.dotfiles_backup"
-SKIP_FILES="install.sh .git README.md preview.png $(find * -maxdepth 0 -regex '^_.*' -printf '%f ')"
-
-shopt -s dotglob
-
-for dot_file in *
+for dotfile in $(find "${DOTFILE_DIR}" -type f -printf '%P ')
 do
-    [[ "${SKIP_FILES}" =~ "${dot_file}" ]] && continue 
+  # Skip Git repository related files.
+  if [[ "${IGNORE_FILES}" =~ "${dotfile}" || "${IGNORE_FILES}" =~ $(echo -n "${dotfile}" | cut -d/ -f1) ]]
+  then
+    continue 
+  fi
 
-    link="${HOME}/${dot_file}"
+  link="${HOME}/${dotfile}"
 
-    if [ -e "${link}" ] && [ ! -L "${link}" ]
-    then
-        echo "Backing up ${link} to ${BACKUP_DIR}"
-        mkdir -p "${BACKUP_DIR}/$(dirname ${link})"
-        mv "${link}" "${BACKUP_DIR}/"
-    fi
+  # Backup existing dotfiles.
+  if [ -e "${link}" ] && [ ! -L "${link}" ]
+  then
+    path="$(dirname "${dotfile}")"
+    backup="${BACKUP_DIR}/${path}"
+    echo "Backing up ${link} to '${BACKUP_DIR}/${dotfile}'"
+    mkdir -p "${backup}"
+    mv "${link}" "${backup}"
+  fi
 
-    ln -sfTv "$(pwd)/${dot_file}" "${link}"
+  # Skip existing links.
+  [[ -L "${link}" ]] && continue
+  
+  # Create directories ans symlinks.
+  mkdir -p $(dirname "${link}")
+  ln -sfTv "${DOTFILE_DIR}/${dotfile}" "${link}"
 done
+
+echo "Done linking dot files."
+
+
