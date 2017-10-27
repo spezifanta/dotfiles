@@ -1,4 +1,4 @@
-BROWSER=firefox
+BROWSER=chromium
 EDITOR=vim
 VISUAL=vim
 PAGER=most

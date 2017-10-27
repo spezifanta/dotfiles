@@ -19,9 +19,9 @@ export PATH=$PATH:$HOME/bin
 PROMPT=$'\n'"%{$fg[green]%}%n@%m:%{$reset_color%}%d"$'\n'"%# "
 RPROMPT="[%*]"
 
-source $HOME/.dotfiles/_zsh/alias
-source $HOME/.dotfiles/_zsh/envvars
-source $HOME/.dotfiles/_zsh/function
+source $HOME/.zsh/alias
+source $HOME/.zsh/envvars
+source $HOME/.zsh/function
 
 setopt share_history
 setopt append_history

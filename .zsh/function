@@ -1,0 +1,35 @@
+# List content every time we change directories.
+function cd {
+    builtin cd "$@" && ls --group-directories-first
+}
+
+# Create an change into new directory.
+function mkd {
+    mkdir -p "$@" && cd "$@"
+}
+
+# Grep process by given name.
+function psgrep {
+    ps aux | head -n1 && ps aux | grep -v grep | egrep "$1" --color=always
+}
+
+# Best website ever!1
+function whatsmyip {
+    curl icanhazip.com
+}
+
+# Pretty print JSON output.
+# Usage: echo '{"foobar": 42}' | json
+function json {
+    python -m json.tool
+}
+
+function afk {
+    i3lock --color=000000
+}
+
+# Because I commit 100% from console.
+# Usage: gcm This is a commit msg
+function gcm {
+    git commit -m "$*"
+}
