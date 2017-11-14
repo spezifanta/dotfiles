@@ -3,7 +3,8 @@ HISTFILE=~/.histfile
 HISTSIZE=10000
 SAVEHIST=10000
 unsetopt beep
-bindkey -v
+#8bindkey -v
+bindkey '^R' history-incremental-search-backward
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/fanta/.zshrc'
@@ -22,6 +23,7 @@ RPROMPT="[%*]"
 source $HOME/.zsh/alias
 source $HOME/.zsh/envvars
 source $HOME/.zsh/function
+source $HOME/.zsh/scripts/z.sh
 
 setopt share_history
 setopt append_history
