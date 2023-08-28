@@ -1,21 +1,21 @@
-# List content every time we change directories.
+# List the contents every time we change directories.
 function cd {
     builtin cd "$@" && ls --group-directories-first
 }
 
-# Create an change into new directory.
+# Create a new directory and change into it.
 function mkd {
     mkdir -p "$@" && cd "$@"
 }
 
-# Grep process by given name.
+# Grep a process by given name.
 function psgrep {
     ps aux | head -n1 && ps aux | grep -v grep | egrep "$1" --color=always
 }
 
 # Best website ever!1
 function whatsmyip {
-    curl icanhazip.com
+    curl https://ipv4.icanhazip.com
 }
 
 # Pretty print JSON output.

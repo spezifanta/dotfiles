@@ -6,6 +6,12 @@ alias gh='cd "$(git rev-parse --show-toplevel)"'
 alias grc='git rebase --continue'
 alias gr='git rebase $(git symbolic-ref refs/remotes/origin/HEAD --short)'
 alias grep='grep -i --color=auto'
-alias ll='ls -hl --group-directories-first'
 alias ls='ls --color=auto'
+
+if [ "$OSTYPE" != linux-gnu ]; then  # Is this the macOS system?
+    # brew install coreutils
+    alias ls='gls --color=auto'
+fi
+
+alias ll='ls -hl --group-directories-first'
 alias hosts='sudo vim /etc/hosts'

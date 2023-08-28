@@ -6,10 +6,13 @@
 
 - link:
     ~/.aliases: aliases
+    ~/.functions: functions
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
+    ~/.zshrc: zshrc
 
 - create:
+    - ~/bin
     - ~/downloads
 
 - shell:
