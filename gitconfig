@@ -11,7 +11,8 @@
     sclone = clone --depth=1
     br = branch
     ci = commit
-    cleanup = "!f() { git branch --merged | grep -v -P '\\*\\|master\\|dev' | xargs -n1 -r git branch -d; }; f"
+    # Clean up merged branches except "master" and "develop".
+    cleanup = "!git branch --merged | grep -v -P '^([\\*|\\+].*|  master|  develop)$' | xargs -n1 -r git branch -d; echo done cleaning"
     co = checkout
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
@@ -26,14 +27,24 @@
     up = !pull --rebase --autostash -X HEAD
     update = pull --rebase --autostash -X theirs origin develop
     who = shortlog -s --
+    wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
 
 [push]
     default = current
     followTags = true
 
+[pull]
+    rebase = true
+
+[rebase]
+    autostash = true
+
 [fetch]
     prune = true
 
-# use separate file for username / github token / etc
+[http]
+    sslVerify = true
+
+# use separate file for username / github token / GPG key / etc
 [include]
     path = ~/.gitconfig.local
