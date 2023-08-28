@@ -5,6 +5,7 @@
 - clean: ["~"]
 
 - link:
+    ~/.aliases: aliases
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
 
