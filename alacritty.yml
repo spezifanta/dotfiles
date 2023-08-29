@@ -1,0 +1,46 @@
+font:
+  normal:
+    family: Hack
+    style: Regular
+
+  bold:
+    family: Hack
+    style: Regular
+
+  italic:
+    family: Hack
+    style: Italic
+
+  bold_italic:
+    family: Hack
+    style: Bold Italic
+
+  size: 13
+
+draw_bold_text_with_bright_colors: true
+
+colors:
+  normal:
+    black: "#646464"
+    red: "#c86464"
+    green: "#96c864"
+    yellow: "#c9a764"
+    blue: "#6496c8"
+    magenta: "#c864c8"
+    cyan: "#64afc8"
+    white: "#ffffff"
+  bright:
+    black: "#000000"
+    red: "#c80000"
+    green: "#64c800"
+    yellow: "#c88500"
+    blue: "#0064c8"
+    magenta: "#c800c8"
+    cyan: "#0096c8"
+    white: "#c8c8c8"
+  cursor:
+    cursor: '#fcbb6a'
+    text: '#ffffff'
+  selection:
+    background: '#4e5a65'
+    text: '#d8dee9'

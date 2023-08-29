@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
 # Original code from http://crunchbang.org/forums/viewtopic.php?pid=134749%23p134749#p134749
 
-colors=($(cat "$HOME/.config/termite/config" | egrep -o 'color1?[0-9]\s*=\s*(.*)' | sort -k2 -tr -n | cut -d'=' -f2 | sed 's/ //'))
-
-echo -e "\e[1;37m
+#colors=($(cat "/Users/fanta/alex/projects/dotfiles/.config/termite/config" | egrep -o 'color1?[0-9]\s*=\s*(.*)' | sort -k2 -tr -n | cut -d'=' -f2 | sed 's/ //'))
+echo "$colors"
+colors=($(cat ~/.config/alacritty/alacritty.yml | egrep color -A18 | egrep -o '\s{4}.*#(.*)'  | cut -d':' -f2 | sed 's/ //' | tr -d '"'))
+echo "$colors"
+#exit 1
+echo -e "\033[1;37m
  Black    Red      Green    Yellow   Blue     Magenta  Cyan     White
 ────────────────────────────────────────────────────────────────────────
-\e[0m"
-for i in {0..7}; do echo -en "\e[$((30+$i))m ${colors[i]} \e[0m"; done
+\033[0m"
+for i in {0..7}; do echo -en "\033[$((30+$i))m ${colors[i]} \033[0m"; done
 echo
-for i in {8..15}; do echo -en "\e[1;$((22+$i))m ${colors[i]} \e[0m"; done
+for i in {8..15}; do echo -en "\033[1;$((22+$i))m ${colors[i]} \033[0m"; done
 echo
+echo -e "\033[1;32mtest"

@@ -4,16 +4,19 @@
 
 - clean: ["~"]
 
+- create:
+    - ~/.config/alacritty
+    - ~/bin
+    - ~/downloads
+
 - link:
     ~/.aliases: aliases
     ~/.functions: functions
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.zshrc: zshrc
-
-- create:
-    - ~/bin
-    - ~/downloads
+    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/bin/colordump: bin/colordump
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
