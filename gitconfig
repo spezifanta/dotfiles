@@ -19,6 +19,8 @@
     last = log -1 HEAD
     lg = log -p
     pushf = push --force-with-lease
+    # Push and merge a GitLab merge request. This is useful, especially if you have CI pipelines with a lot of tests.
+    pusha = push -o merge_request.create -o merge_request.merge_when_pipeline_succeeds
     recover = "!f() { git checkout $(git rev-list -n 1 HEAD -- \"$1\")^ -- \"$1\";}; f"
     remotes = remote -v
     st = status -sb .

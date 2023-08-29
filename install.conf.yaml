@@ -6,6 +6,7 @@
 
 - create:
     - ~/.config/alacritty
+    - ~/.local/share/fonts
     - ~/bin
     - ~/downloads
 
