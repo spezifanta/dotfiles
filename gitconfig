@@ -14,6 +14,7 @@
     # Clean up merged branches except "master" and "develop".
     cleanup = "!git branch --merged | grep -v -P '^([\\*|\\+].*|  master|  develop)$' | xargs -n1 -r git branch -d; echo done cleaning"
     co = checkout
+    cp = cherry-pick
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
     last = log -1 HEAD
