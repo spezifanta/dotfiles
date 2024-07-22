@@ -17,6 +17,8 @@
     cp = cherry-pick
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
+    home = rev-parse --show-toplevel
+    fix = "!git amend && git pushf"
     last = log -1 HEAD
     lg = log -p
     pushf = push --force-with-lease
@@ -51,3 +53,7 @@
 # use separate file for username / github token / GPG key / etc
 [include]
     path = ~/.gitconfig.local
+[rerere]
+	enabled = true
+[maintenance]
+	repo = /home/kuhrt/work/code/devops/pm
