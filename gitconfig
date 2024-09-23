@@ -17,7 +17,7 @@
     cp = cherry-pick
     df = diff
     hist = log --pretty="tformat:\"%Cgreen%h%Creset %ad | %s %Cgreen%d%Creset [%an]\"" --date=short
-    home = rev-parse --show-toplevel
+    home = "!f() { cd $(git rev-parse --show-toplevel); }; f"
     fix = "!git amend && git pushf"
     last = log -1 HEAD
     lg = log -p
@@ -37,6 +37,7 @@
 [push]
     default = current
     followTags = true
+    autoSetupRemote = true
 
 [pull]
     rebase = true
@@ -46,6 +47,8 @@
 
 [fetch]
     prune = true
+[checkout]
+    defaultRemote = origin
 
 [http]
     sslVerify = true
