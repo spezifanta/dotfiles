@@ -16,7 +16,7 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.zshrc: zshrc
-    ~/.config/alacritty/alacritty.yml: alacritty.yml
+    ~/.config/alacritty/alacritty.toml: alacritty.toml
     ~/bin/colordump: bin/colordump
 
 - shell:
