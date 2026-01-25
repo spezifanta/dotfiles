@@ -5,17 +5,12 @@ function cd {
 
 # Create a new directory and change into it.
 function mkd {
-    mkdir -p "$@" && cd "$@"
+    mkdir -p "$1" && cd "$1"
 }
 
 # Grep a process by given name.
 function psgrep {
-    ps aux | head -n1 && ps aux | grep -v grep | egrep "$1" --color=always
-}
-
-# Best website ever!1
-function whatsmyip {
-    curl https://ipv4.icanhazip.com
+    ps aux | grep -E "^USER|$1" | grep -v "grep -E" --color=always
 }
 
 # Pretty print JSON output.
