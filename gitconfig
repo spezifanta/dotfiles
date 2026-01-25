@@ -58,5 +58,3 @@
     path = ~/.gitconfig.local
 [rerere]
 	enabled = true
-[maintenance]
-	repo = /home/kuhrt/work/code/devops/pm
