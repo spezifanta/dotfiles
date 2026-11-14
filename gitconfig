@@ -47,6 +47,7 @@
 
 [fetch]
     prune = true
+
 [checkout]
     defaultRemote = origin
 
@@ -56,5 +57,6 @@
 # use separate file for username / github token / GPG key / etc
 [include]
     path = ~/.gitconfig.local
+    
 [rerere]
 	enabled = true
