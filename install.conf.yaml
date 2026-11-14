@@ -1,6 +1,9 @@
 - defaults:
     link:
       relink: true
+      create: true
+    create:
+      mode: 0755
 
 - clean: ["~"]
 
@@ -12,12 +15,27 @@
 
 - link:
     ~/.aliases: aliases
+    ~/.editorconfig: editorconfig
     ~/.functions: functions
     ~/.gitconfig: gitconfig
     ~/.gitignore: gitignore
     ~/.zshrc: zshrc
+    ~/.z.sh: z.sh
+    ~/.xinitrc: xinitrc
+    ~/.Xresources: Xresources
     ~/.config/alacritty/alacritty.toml: alacritty.toml
+    ~/.config/alacritty/catppuccin-mocha.toml: alacritty-catppuccin-mocha.toml
+    ~/.config/i3/config: i3/config
+    ~/.config/polybar: polybar
+    ~/.config/picom/picom.conf: picom/picom.conf
+    ~/.config/autorandr: autorandr
+    ~/.config/rofi: rofi
+    ~/.config/wallpaper.png: wallpapers/catppuccin-mocha-minimal.png
+    ~/.config/user-dirs.dirs: user-dirs.dirs
+    ~/.config/user-dirs.conf: user-dirs.conf
     ~/bin/colordump: bin/colordump
+    ~/bin/killme: bin/killme
+    ~/bin/lock-screen: bin/lock-screen
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]

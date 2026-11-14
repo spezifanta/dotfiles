@@ -1,0 +1,5 @@
+#!/bin/sh
+# Runs after autorandr changes the display setup. Goes through i3 so the
+# processes belong to the desktop session, and restores what needs a monitor.
+i3-msg "exec --no-startup-id ~/.config/polybar/launch.sh" >/dev/null
+i3-msg "exec --no-startup-id feh --no-fehbg --bg-fill ~/.config/wallpaper.png" >/dev/null

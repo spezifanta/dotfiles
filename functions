@@ -20,7 +20,7 @@ function json {
 }
 
 function afk {
-    i3lock --color=000000
+    ~/bin/lock-screen
 }
 
 # Because I commit 100% from console.

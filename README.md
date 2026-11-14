@@ -27,6 +27,10 @@ cd ~/.dotfiles
 | **git** | Extensive aliases (`st`, `co`, `hist`, `wip`, `cleanup`), auto-rebase, rerere |
 | **gitignore** | Global ignores for swap files, .pyc, .DS_Store |
 | **alacritty** | Terminal config with Hack font, custom color scheme, transparency |
+| **i3** | Window manager config, `$mod+Return` opens Alacritty |
+| **X11** | `xinitrc` (starts i3 via `startx`) and `Xresources` |
+| **z** | Jump to frequently used directories |
+| **editorconfig** | Global editor defaults |
 
 ## Local Overrides
 

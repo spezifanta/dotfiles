@@ -1,33 +1,5 @@
-[colors]
-draw_bold_text_with_bright_colors = true
-
-[colors.bright]
-black = "#000000"
-blue = "#0064c8"
-cyan = "#00c8c8"
-green = "#64c800"
-magenta = "#c800c8"
-red = "#c80000"
-white = "#c8c8c8"
-yellow = "#ffc800"
-
-[colors.cursor]
-cursor = "#fcbb6a"
-text = "#ffffff"
-
-[colors.normal]
-black = "#646464"
-blue = "#6496c8"
-cyan = "#64c8c8"
-green = "#96c864"
-magenta = "#c864c8"
-red = "#c86464"
-white = "#ffffff"
-yellow = "#ffc864"
-
-[colors.selection]
-background = "#4e5a65"
-text = "#d8dee9"
+[general]
+import = ["~/.config/alacritty/catppuccin-mocha.toml"]
 
 [env]
 TERM = "xterm-256color"
@@ -57,9 +29,14 @@ y = 2
 
 [window]
 blur = true
-decorations = "Buttonless"
+decorations = "Full"
 opacity = 0.8
 
 [window.padding]
 x = 10
 y = 10
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"

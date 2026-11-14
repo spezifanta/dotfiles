@@ -1,8 +1,0 @@
-BROWSER=chromium
-EDITOR=vim
-VISUAL=vim
-PAGER=most
-TERM=xterm-256color
-
-export BROWSER EDITOR VISUAL PAGER TERM
-
