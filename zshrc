@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/Users/fanta/Library/Python/3.9/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/Users/fanta/Library/Python/3.9/bin:$PATH
 
 export EDITOR=vim
 export VISUAL=vim
@@ -21,3 +21,8 @@ RPROMPT="[%*]"
 source $HOME/.aliases
 source $HOME/.functions
 source $HOME/.z.sh
+
+# Machine-specific overrides (untracked).
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+export NX_SKIP_NATIVE_FILE_CACHE=true
+

@@ -14,6 +14,12 @@ red=f38ba8ff
 clear=00000000
 font="Hack Nerd Font"
 
+# plain i3lock (no -color build) understands none of the flags below, so
+# fall back to a solid Mocha lock instead of failing to lock at all.
+if ! i3lock --help 2>&1 | grep -q -- '--blur'; then
+    exec i3lock --color "${base%??}" --ignore-empty-password "$@"
+fi
+
 i3lock \
     --blur 8 \
     --clock --indicator \
